@@ -1,0 +1,25 @@
+{% extends "base.html"%} {% block content %}
+<div class="row justify-content-center">
+  {% for category in cat_dict %}
+  <div class="col-md-3 bag">
+    <div class="row">
+      <div class="card" style="width: 18rem;">
+        <a href="/category/{{ category }}">
+          <img
+            src="/static/images/{{ cat_dict[category] }}.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">{{ category }}</h5>
+          <a href="/category/{{ category }}" class="btn btn-primary"
+            >Смотреть все товары из категории</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

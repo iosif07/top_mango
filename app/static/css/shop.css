@@ -1,0 +1,17 @@
+.row img{
+    width: 70%;
+    margin: 0 auto;
+    height: 15em;
+}
+
+body{
+    text-align: center;
+}
+
+.card{
+    margin-top: 2em;
+}
+.itemImg{
+    height: auto !important;
+    margin-top: 1em !important;
+}

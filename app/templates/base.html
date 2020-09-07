@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Codamess</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>        
+        
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+        <link rel="stylesheet" href="/static/css/nav.css"> 
+        <link rel="stylesheet" href="/static/css/shop.css"> 
+        <link rel="stylesheet" href="/static/css/add_item.css">
+        <link rel="stylesheet" href="/static/css/categories.css">
+        
+    </head>
+
+    <body>  
+
+
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <a class="navbar-brand" href="#">Codabra Shop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href='/main_page/'>Главная <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/categories/">топ манг</a>
+                </li>
+               
+          <li class="nav-item">
+                  <a class="nav-link" href="/orders/">Корзина</a>
+          </li>
+              </ul>
+              
+            </div>
+          </nav>
+
+
+
+        
+        {%block content%}
+        {%endblock%}    
+    </body>
+
+</html>

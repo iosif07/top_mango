@@ -1,0 +1,23 @@
+a{
+    color: white !important;
+    transition: all 1s;
+}
+a:hover{
+    background-color: #337AE9 !important;
+}
+nav{
+    border-radius: 0;
+}
+.logo{
+    width: 50px;
+}
+.navbar{
+    border-radius: 0 !important;
+}
+.navigation-custom{
+    background-image:none !important;
+    background-color:#81f28c !important
+                    }
+.navigation-custom .navbar-nav>li>a:hover{
+    background-color:#71d67b !important  
+                    }

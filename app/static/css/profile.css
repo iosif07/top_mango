@@ -1,0 +1,25 @@
+.back{
+        background-color: #dbffde;
+}    
+.back>hr{
+        border-color: #000000;
+}
+.top_buf{
+        margin-top:20px;
+}
+.aboutme{
+        margin-top: 100px;
+        margin-bottom: 12px;
+        background-color: #efffef;
+        height:200px;
+}
+.btn{
+        background: #007bff !important;
+        transition: all 1s;
+}
+.btn:hover{
+    background:#007BB3 !important;
+}
+.jumbotron{
+    padding: 5%;
+}
