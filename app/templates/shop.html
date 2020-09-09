@@ -1,26 +1,26 @@
 {% extends "base.html"%}
 {% block content %}
 <link rel="stylesheet" href="/static/css/profile.css"> 
-
 <div class="row justify-content-center">
-    {% for item in items  %}
+
+
+{% for item in items  %}
         
-        <div class="col-md-3 bag">
+
+        <div class="col-md-4 bag row justify-content-center">
             <div class="row">
                 <div class="card" style="width: 18rem;">
-                    <a href='../item/{{item.item_id}}'>
-                        <img src="/static/images/{{ item.photo_hash }}.jpg" class="card-img-top"> 
-                    </a>
-                    
+                    <img src="/static/images/{{ item.photo_hash }}.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">{{ item.name }}</h5>
                       <p class="card-text">Цена: {{ item.cost }}</p>
-                      <a href="../item/{{item.item_id}}" class="btn btn-primary">Перейти к товару</a>
+                      <a href="/item/{{item.item_id}}" class="btn btn-primary">Перейти к товару</a>
                     </div>
-                </div>
+                  </div>
             </div>
         </div>
-    
+
+
     {% endfor %}
 </div>
 {% endblock %}

@@ -1,41 +1,40 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <script>
-    function add() {
-        Swal.fire({
-            title: 'Спасибо!',
-            text: 'Товар успешно добавлен в корзину',
-            type: 'success',
-            confirmButtonText: 'Пойду покупать еще!'
-        })
-        $.ajax({
-                type: "post",
-                url: "/add_item_in_order/",
-                dataType: "json",
-                data : { id : {{ item.item_id }}}
-            });
-        }
-    </script>
-        
-        <div class="row min-height align-items-center justify-content-center">
-            <div class="col-4">
-                <img src="/static/images/{{ item.photo_hash }}.jpg" class="itemImg"> 
-            </div>
-            <div class="col-8">
-                <div class="jumbotron">
-                    <h1 class="display-4">{{ item.name }}</h1>
-                    <p class="lead">Категория: {{ item.category }}</p>
-                    <p class="lead"> {{item.cost}} </p>
-                    <hr class="my-4">
-                    <p>{{ item.description }}</p>
-                    <p class="lead">
-                      <button class="btn btn-primary btn-lg" onclick="add()">Добавить в корзину</button>
-                    </p>
-                  </div>
-            </div>
-        </div>
+          function add() {
+              Swal.fire({
+                title: 'Спасибо!',
+                text: 'Товар успешно добавлен в корзину',
+                type: 'success',
+                confirmButtonText: 'Пойду покупать еще!'
+            })
+              $.ajax({
+                      type: "post",
+                      url: "/add_item_in_order/",
+                      dataType: "json",
+                      data : { id : {{ item.item_id }}}
+                  });
+              }
+</script>
+
+<div class="row min-height align-items-center justify-content-center">
+  <div class="col-4">
+    <img src="/static/images/{{ item.photo_hash }}.jpg" />
+  </div>
+  <div class="col-8">
+    <div class="jumbotron">
+      <h1 class="display-4">{{ item.name }}</h1>
+      <p class="lead">Категория: {{ item.category }}</p>
+      <p class="lead">{{ item.cost }}</p>
+      <hr class="my-4" />
+      <p>{{ item.description }}</p>
+      <p class="lead">
+        <button class="btn btn-primary btn-lg" onclick="add()">
+          Добавить в корзину
+        </button>
+      </p>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
-
